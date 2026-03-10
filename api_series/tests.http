@@ -1,8 +1,19 @@
 ### Variaveis de ambiente
+@base_url = "http://127.0.0.1:8000
 
-@base_url = http://127.00.1:8000
+### Teste de conexão com a API"
 
-### Teste de conexão com a API
-
-GET {{base_url}}/api/ HTTP/1.1
+GET {{base_url}}/ HTTP/1.1
 Accept: application/json
+
+### Criação de uma série
+POST {{base_url}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Breaking Bad",
+    "descricao": "Um professor de química do ensino médio se torna um fabricante de metanfetamina para garantir o futuro financeiro de sua família após ser diagnosticado com câncer.",
+    "ano_lancamento": 2008,
+    "genero": "Crime, Drama, Thriller",
+    "temporadas": 5
+}
