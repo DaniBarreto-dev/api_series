@@ -1,1 +1,8 @@
-GET
+### Variaveis de ambiente
+
+@base_url = http://127.00.1:8000
+
+### Teste de conexão com a API
+
+GET {{base_url}}/api/ HTTP/1.1
+Accept: application/json
