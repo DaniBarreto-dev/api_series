@@ -6,5 +6,5 @@ class SerieSchema(BaseModel):
     descricao: Optional[str] = None
     ano_lancamento: int
 
-    class config:
-        from_atribute = True
+    class Config:
+        from_attributes = True

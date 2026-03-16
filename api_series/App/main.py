@@ -1,8 +1,12 @@
 from fastapi import FastAPI
-from App.Route.serie import serie
+from App.Route.serie import router
+from App.Schema.database import Base, engine
+
 app = FastAPI()
 
-app.include_router(serie)
+Base.metadata.create_all(bind=engine)
+
+app.include_router(router)
 
 @app.get("/")
 async def health_check():
